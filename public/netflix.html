@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Netflix - Movies Online</title>
+
+  <!-- Bootstrap Icons ke liye CSS (icons use karne ke liye, jaise bi bi-play-fill) -->
+  <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+  <!-- Bootstrap ki main CSS file (sabhi classes ke liye, jaise container, row, btn, card etc.) -->
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+
+  <!-- Teri custom Netflix wali CSS file (apne styles likhne ke liye) -->
+  <link rel="stylesheet" href="../src/styles/netflix.css">
+
+  <!-- React library (development mode, JSX aur React components ke liye) -->
+  <script src="../node_modules/react/umd/react.development.js"></script>
+
+  <!-- ReactDOM library (React components ko DOM me render karne ke liye) -->
+  <script src="../node_modules/react-dom/umd/react-dom.development.js"></script>
+
+  <!-- Babel standalone (browser ke andar hi JSX ko JavaScript me convert karne ke liye) -->
+  <script src="../node_modules/@babel/standalone/babel.js"></script>
+
+  <!-- Bootstrap ka JS bundle (modal, carousel, collapse jaise interactive components ke liye) -->
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+</head>
+
+<body>
+  <noscript>Please enable JavaScript on your browser</noscript>
+  <div id="root"></div>
+
+  <!-- React + JSX code -->
+  <script type="text/babel">
+
+    function NetflixIndex() {
+      return (
+        <div className="bg-style">
+          <NetflixHeader />
+          <section>
+            <NetflixMain />
+          </section>
+        </div>
+      )
+    }
+
+    function NetflixHeader() {
+      return (
+        <header className="p-4 d-flex justify-content-between">
+          <div> <span className="brand-title">NETFLIX</span> </div>
+          <div className="d-flex justify-content-between">
+            <div>
+              <div className="input-group">
+                <span className="bi bi-translate input-group-text"></span>
+                <select className="form-select">
+                  <option>Language</option>
+                  <option>English</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <button className="btn btn-light mx-2">Sign in</button>
+            </div>
+          </div>
+        </header>
+      )
+    }
+
+    function NetflixMain() {
+      return (
+        <main>
+          <div className="main-shade">
+            <div className="main-title"> Unlimited movies, TV <br />shows and more</div>
+            <div className="main-subtitle"> Starts at ₹149. Cancel at any time. </div>
+            <div className="pt-4">
+              <NetflixRegister />
+            </div>
+          </div>
+        </main>
+      )
+    }
+
+    function NetflixRegister() {
+      return (
+        <form>
+          <div className="pb-4">Ready to watch? Enter your email to create or restart your membership.</div>
+          <div>
+            <input type="email" placeholder="Email address" className="email" />
+            <button type="button" className="btn-start">
+              Get Started <span className="bi bi-chevron-right"></span>
+            </button>
+          </div>
+        </form>
+      )
+    }
+
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+    root.render(<NetflixIndex />);
+
+  </script>
+</body>
+
+</html>

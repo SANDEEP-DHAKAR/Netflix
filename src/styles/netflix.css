@@ -1,0 +1,72 @@
+.bg-style {
+    height: 100vh;
+    background-image: url("../../public/netflix image.jpg");
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: darken;
+
+}
+
+.brand-title {
+    color: red;
+    margin-left: 70px;
+    font-size: 40px;
+    font-family: Arial;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px white;
+}
+
+main {
+    background-size: cover;
+    height: 400px;
+    margin: 60px 30px 60px 30px;
+    border-radius: 30px;
+}
+
+.main-shade {
+    height: 400px;
+    border-radius: 30px;
+    text-align: center;
+    color: white;
+    font-family: Arial;
+}
+
+.form-select{
+    color: white;
+    font-weight: bold;
+    background-color: black;
+}
+.btn{
+    background-color: rgb(222, 12, 12);
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.main-title {
+    font-size: 50px;
+    font-weight: 900;
+    padding-top: 30px;
+}
+
+.main-subtitle {
+    font-size: 20px;
+}
+
+.email,
+.btn-start {
+    font-size: 23px;
+    padding: 10px;
+    border-radius: 25px;
+    margin-right: 10px;
+    border: none;
+}
+
+.email::placeholder {
+    font-size: 16px;
+}
+
+.btn-start {
+    background-color: red;
+    color: white;
+}
